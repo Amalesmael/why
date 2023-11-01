@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ac/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ac/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="ac/css/ask.css">
+    <title>ASK</title>
+</head>
+<body>
+       <!--start navbar -->
+       <div class="nav">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                   <a  class="nav-link"  href="index.html"> <img class="logo" src="ac/img/images.jpg" alt="logo"></a> 
+                  <a class="navbar-brand text-black" href="index.html">WHY?</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav justify-content-center">
+                      <li class="nav-item">
+                        <a class="nav-link  text-black" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-black" href="admin.html">admin</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link activee text-black" href="ask.html">ask</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-black" href="logout.html">log out</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-black" href="whoareus.html">who are us?</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+       </div>
+    <!-- end navbar -->
+    <!--table-->
+    <div class="ask">
+        <div class="container p-5">
+    <table class="table">
+        <thead class="bg-dark text-light">
+          <tr>
+            <th scope="col">NUMBER</th>
+            <th scope="col">WHO ASKED</th>
+            <th scope="col">QUESTION</th>
+            <th scope="col">YOU CAN ANSWER</th>
+            <th scope="col">ANSWER</th>
+            <th scope="col">EDIT</th>
+            <th scope="col">DELETE</th>
+          </tr>
+        </thead>
+        <tbody class="table-secondary">
+          <tr class="table-secondary">
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>.....</td>
+            <td id="ans">
+              <button type="button" id="btn" class="btn btn-secondary">answer</button>
+            </td>
+            <td>.....</td>
+            <td><button type="button" class="btn btn-success"><a class="text-light" href="editaskadmin.html"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+            </svg></a></button></td>
+            <td>              <!-- Button trigger modal -->
+              <button type="button" class=" btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+              <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+             </svg>
+            </button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">DELETE ASK</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ARE YOU SURE ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger">delete</button>
+        </div>
+      </div>
+    </div>
+  </div></td>
+          </tr>
+          <tr class="table-secondary">
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>.....</td>
+            <td>...</td>
+            <td>....</td>
+            <td>
+              <button type="button" class="btn btn-success"><a class="text-light" href="editaskadmin.html"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+            </svg></a></button></td>
+              <td>            
+                  <!-- Button trigger modal -->
+                <button type="button" class=" btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+               </svg>
+              </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">DELETE ASK</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ARE YOU SURE ?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger">delete</button>
+          </div>
+        </div>
+      </div>
+    </div></td>
+          </tr>
+          <tr class="table-secondary">
+            <th scope="row">3</th>
+            <td>ahmed</td>
+            <td>.....</td>
+            <td>...</td>
+            <td>....</td>
+            <td><button type="button" class="btn btn-success"><a class="text-light" href="editaskadmin.html"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+            </svg></a></button></td>
+              <td>              <!-- Button trigger modal -->
+                <button type="button" class=" btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+               </svg>
+              </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">DELETE ASK</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ARE YOU SURE ?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger">delete</button>
+          </div>
+        </div>
+      </div>
+    </div></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-dark me-md-2" type="button"><a class="text-light" href="addaskadmin.html">add nwe ask </a></button>
+      </div>
+      </div>
+    </div>
+    <!-- table-->
+ <!-- start footer  -->
+ <div class="footer">
+    <div class="container">
+        <div class="box">
+            <h3>WHY?</h3>
+            <ul class="social">
+                <li>
+                    <a href="https://ar-ar.facebook.com/" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/i/flow/login" class="twitter"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/" class="youtube"><i class="fab fa-youtube"></i></a>
+                </li>
+            </ul>
+            <p class="text">
+        </div>
+        <div class="box">
+            <ul class="text-light">
+                <li class="p-2"><a  class="text-light p-3" href="admin.html">admin</a></li>
+                <li class="p-2"><a  class="text-light p-3" href="ask.html">ask</a></li>
+                <li class="p-2"><a class="text-light p-3" href="whoareus.html">how are us?</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <div class="line">
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                <div class="info">egypt, tanta , taha elhakem</div>
+            </div>
+            <div class="line">
+                <i class="fas fa-phone-volume fa-fw"></i>
+                <div class="info">
+                    <span>+201068608590</span>
+              </div>
+             </div>
+        </div>
+        <div class="box footer-gallery">
+            <img src="ac/img/ilpdakgajil15_article.webp" alt="">
+            <img src="ac/img/بحث-عن-مهارات-التفكير.jpg" alt="">
+            <img src="ac/img/images (2).jpg" alt="">
+            <img src="ac/img/images.jpg" alt="">
+            <img src="ac/img/why-picture-1024x576.gif" alt="">
+            <img src="ac/img/images.png" alt="">
+        </div>
+    </div>
+    <p class="copyright">Made With <span class="text-white-50">AMAL ESMAIL</span></p>
+</div>
+<!-- end footer  -->
+    <script src="ac/js/all.min.js"></script>
+    <script src="ac/js/bootstrap.bundle.min.js"></script>
+    <script src="ac/js/ask.js"></script>
+</body>
+</html>
